@@ -8,6 +8,7 @@ set homedir=C:\Users\%username%\
 :Main_Cmd
 set Main=
 set /p Main="%cd%>"
+  if "%Main%"=="ls" dir & echo. & goto main_cmd
 
 ::自作コマンドの入力チェック
 set sethome=sethome
@@ -44,7 +45,7 @@ echo.
 goto main_cmd
 
 :sethome_help
-echo [usage]: sethome (pass)
+echo [usage]: sethome (path)
 echo.
 echo [description]
 echo homeにパスを設定します。
